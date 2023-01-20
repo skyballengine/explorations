@@ -4,8 +4,8 @@ from composition import Cube
 
 def main():
     rect_1 = Rectangle(5, 8)
-    repr(rect_1._length)
-    str(rect_1._length)
+    print(repr(rect_1._length))
+    print(str(rect_1._length))
     repr(rect_1)
     str(rect_1)
     cube_1 = Cube(7)
