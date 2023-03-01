@@ -65,6 +65,17 @@ class LinkedList:
         """
         return self._head is None
 
+    def to_regular_list(self):
+        """
+        Returns a regular Python list containing the same values, in the same order, as the linked list
+        """
+        result = []
+        current = self._head
+        while current is not None:
+            result += [current.data]
+            current = current.next
+        return result
+
     def contains(self, val):
         if self._head is None:
             return False
@@ -81,18 +92,20 @@ class LinkedList:
 
 
 def main():
+    # exercise 1 - contains method
     linked_list = LinkedList()
     val_list = [1, 140, "hello", 1001, "why"]
     for val in val_list:
         linked_list.add(val)
-
     linked_list.display()
     print(linked_list.contains(1001))
     print(linked_list.contains(1))
     print(linked_list.contains(100))
-
     linked_list_2 = LinkedList()
     print(linked_list_2.contains(8))
+
+    # exercise 2 - insert method
+
 
 
 if __name__ == "__main__":
